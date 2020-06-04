@@ -14,33 +14,19 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-rl.question('What do you think of Node.js? ', (answer) => {
-  console.log(`Thank you for your valuable feedback: ${answer}`);
-
-  rl.close();
+rl.question(QUESTIONS[0], (answer1) => {
+  rl.question(QUESTIONS[1], (answer2)  => {
+    rl.question(QUESTIONS[2], (answer3) => {
+      rl.question(QUESTIONS[3], (answer4) => {
+        rl.question(QUESTIONS[4], (answer5) => {
+          rl.question(QUESTIONS[5], (answer6) => {
+            rl.question(QUESTIONS[6], (answer7) => {
+              console.log(`${answer1} loves listening to ${answer3} while ${answer2}, devouring ${answer5} for ${answer4}, prefers ${answer6} over any other sport, and is amazing at ${answer7}.`);
+              rl.close();
+            })
+          })
+        })
+      })
+    })
+  })
 });
-
-rl.question('What do you think of Node.js? ', (answer) => {
-  console.log(`Thank you for your valuable feedback: ${answer}`);
-
-  rl.close();
-});
-
-// const askQuestion = (question) => {
-//   rl.question(question, (answer) => {
-//   });
-// }
-
-// const questionare = () => {
-//   let count = 0;
-//   const answers = [];
-//   for (const question of QUESTIONS) {
-//     count++;
-//     answers.push(askQuestion(question));
-//   }
-//   if(count > QUESTIONS.length) {
-//     rl.close();
-//   }
-// }
-
-// questionare();
